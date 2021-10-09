@@ -1,0 +1,14 @@
+program DelphiProject;
+
+uses
+  Vcl.Forms,
+  LoginScreen in 'LoginScreen.pas' {Login};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TLogin, Login);
+  Application.Run;
+end.

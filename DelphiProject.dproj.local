@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/10/03 17:19:49.000.174,=C:\Users\red\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/03 19:55:32.000.509,=C:\Users\red\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/03 20:07:30.000.009,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\LoginScreen.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/10/03 20:07:30.000.009,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\LoginScreen.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/03 20:10:46.000.350,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DelphiProject.dproj=C:\Users\red\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/10/04 20:58:53.000.125,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
+    <Transaction>2021/10/04 21:07:03.000.972,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModel.dfm</Transaction>
+    <Transaction>2021/10/04 21:07:03.000.972,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModel.pas</Transaction>
+    <Transaction>2021/10/04 21:42:37.000.447,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
+    <Transaction>2021/10/04 21:44:02.000.673,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModule.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
+    <Transaction>2021/10/04 21:44:02.000.673,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModule.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm</Transaction>
+    <Transaction>2021/10/04 23:34:17.000.456,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
+    <Transaction>2021/10/04 23:36:04.000.456,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModuleUnit.pas</Transaction>
+    <Transaction>2021/10/04 23:36:04.000.456,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModuleUnit.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

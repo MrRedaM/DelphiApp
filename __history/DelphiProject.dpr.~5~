@@ -1,0 +1,16 @@
+program DelphiProject;
+
+uses
+  Vcl.Forms,
+  LoginScreen in 'LoginScreen.pas' {Login},
+  DataModule in 'DataModule.pas' {DB: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TLogin, Login);
+  Application.CreateForm(TDB, DB);
+  Application.Run;
+end.
