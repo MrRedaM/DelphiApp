@@ -1570,7 +1570,7 @@ object MainForm: TMainForm
     TabOrder = 2
     ExplicitTop = 219
     ExplicitHeight = 335
-    object ListView: TListView
+    object LV: TListView
       Left = 16
       Top = 16
       Width = 759
@@ -1578,14 +1578,13 @@ object MainForm: TMainForm
       Align = alClient
       BevelOuter = bvNone
       BorderStyle = bsNone
-      Columns = <
-        item
-        end>
+      Columns = <>
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
+      RowSelect = True
       ParentFont = False
       TabOrder = 0
       ViewStyle = vsReport

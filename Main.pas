@@ -22,7 +22,7 @@ type
     SearchByName: TSearchBox;
     Image3: TImage;
     Panel1: TPanel;
-    ListView: TListView;
+    LV: TListView;
     procedure CBDocTypeChange(Sender: TObject);
     procedure FormActivate(Sender: TObject);
   private
@@ -44,8 +44,51 @@ begin
 end;
 
 procedure TMainForm.FormActivate(Sender: TObject);
+var
+col : TListColumn; line : TListItem;
+  I: Integer;
 begin
-  ShowMessage('Activate!');
+  CBDocType.ItemIndex := 0;
+  col := LV.Columns.Add;
+  col.Caption := 'Numéro';
+  col := LV.Columns.Add;
+  col.Caption := 'Référence courier';
+  col := LV.Columns.Add;
+  col.Caption := 'Date de réalisation organisme';
+  col := LV.Columns.Add;
+  col.Caption := 'Adresse';
+  col := LV.Columns.Add;
+  col.Caption := 'Téléphone';
+  col := LV.Columns.Add;
+  col.Caption := 'Email';
+  col := LV.Columns.Add;
+  col.Caption := 'Fax';
+  col := LV.Columns.Add;
+  col.Caption := 'Type de Réseaux';
+  col := LV.Columns.Add;
+  col.Caption := 'Travaille effectué Désignation';
+  col := LV.Columns.Add;
+  col.Caption := 'Marque';
+  col := LV.Columns.Add;
+  col.Caption := 'Quantité';
+  col := LV.Columns.Add;
+  col.Caption := 'Observation';
+  for I := 1 to 10 do
+    begin
+      line := LV.Items.Add;
+      line.Caption := i.ToString;
+      line.SubItems.Add('Référence ' + i.ToString);
+      line.SubItems.Add('Date ' + i.ToString);
+      line.SubItems.Add('Adresse ' + i.ToString);
+      line.SubItems.Add('Téléphone ' + i.ToString);
+      line.SubItems.Add('Email ' + i.ToString);
+      line.SubItems.Add('Fax ' + i.ToString);
+      line.SubItems.Add('Type ' + i.ToString);
+      line.SubItems.Add('Travaille ' + i.ToString);
+      line.SubItems.Add('Marque ' + i.ToString);
+      line.SubItems.Add('Quantité ' + i.ToString);
+      line.SubItems.Add('Observation ' + i.ToString);
+    end;
 end;
 
 end.
