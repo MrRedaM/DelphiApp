@@ -2,12 +2,11 @@ object Login: TLogin
   Left = 0
   Top = 0
   ActiveControl = Panel1
-  AutoSize = True
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSizeToolWin
   Caption = 'Connexion BDD'
-  ClientHeight = 393
-  ClientWidth = 395
+  ClientHeight = 406
+  ClientWidth = 362
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,7 +20,7 @@ object Login: TLogin
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 395
+    Width = 362
     Height = 393
     Align = alTop
     Padding.Left = 32
@@ -29,11 +28,11 @@ object Login: TLogin
     Padding.Right = 32
     Padding.Bottom = 32
     TabOrder = 0
-    ExplicitHeight = 374
+    ExplicitTop = 5
     object Title: TLabel
       Left = 33
       Top = 33
-      Width = 329
+      Width = 296
       Height = 32
       Margins.Left = 16
       Margins.Top = 16
@@ -51,8 +50,8 @@ object Login: TLogin
       ExplicitWidth = 276
     end
     object EditServer: TEdit
-      Left = 112
-      Top = 109
+      Left = 88
+      Top = 128
       Width = 177
       Height = 21
       Alignment = taCenter
@@ -66,8 +65,8 @@ object Login: TLogin
       TextHint = 'Serveur'
     end
     object EditUsername: TEdit
-      Left = 112
-      Top = 216
+      Left = 88
+      Top = 215
       Width = 177
       Height = 21
       Alignment = taCenter
@@ -81,8 +80,8 @@ object Login: TLogin
       TextHint = 'Utilisateur'
     end
     object EditPassword: TEdit
-      Left = 112
-      Top = 272
+      Left = 88
+      Top = 258
       Width = 177
       Height = 21
       Alignment = taCenter
@@ -96,8 +95,8 @@ object Login: TLogin
       TextHint = 'Mot de passe'
     end
     object EditDB: TEdit
-      Left = 112
-      Top = 160
+      Left = 88
+      Top = 171
       Width = 177
       Height = 21
       Alignment = taCenter
@@ -113,7 +112,7 @@ object Login: TLogin
     object Button1: TButton
       Left = 33
       Top = 335
-      Width = 329
+      Width = 296
       Height = 25
       Cursor = crHandPoint
       Align = alBottom
@@ -126,20 +125,19 @@ object Login: TLogin
       ParentFont = False
       TabOrder = 4
       OnClick = Button1Click
-      ExplicitLeft = 112
-      ExplicitTop = 272
-      ExplicitWidth = 177
+      ExplicitWidth = 238
     end
   end
   object StatusServer: TStatusBar
     Left = 0
-    Top = 374
-    Width = 395
+    Top = 387
+    Width = 362
     Height = 19
     Color = clWhite
     Panels = <>
     SimplePanel = True
     SimpleText = 'Server : Disconnected'
-    ExplicitTop = 393
+    ExplicitTop = 374
+    ExplicitWidth = 304
   end
 end
