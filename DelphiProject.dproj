@@ -115,6 +115,14 @@
             <Form>MainForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="NewPvUnit.pas">
+            <Form>NewPvForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="NewDodationUnit.pas">
+            <Form>NewDodationForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

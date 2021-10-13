@@ -26,6 +26,7 @@ type
     DBGrid: TDBGrid;
     procedure CBDocTypeChange(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure BtnEditClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,7 +40,16 @@ implementation
 
 {$R *.dfm}
 
-uses DataModuleUnit;
+uses DataModuleUnit, NewDodationUnit;
+
+procedure TMainForm.BtnEditClick(Sender: TObject);
+begin
+  case CBDocType.ItemIndex of
+    0: ;
+    1: NewDodationForm.ShowModal;
+    2: ;
+  end;
+end;
 
 procedure TMainForm.CBDocTypeChange(Sender: TObject);
 var
