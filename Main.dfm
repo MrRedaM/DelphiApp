@@ -1,7 +1,7 @@
 object MainForm: TMainForm
   Left = 0
   Top = 0
-  Caption = 'MainForm'
+  Caption = 'Application'
   ClientHeight = 554
   ClientWidth = 791
   Color = clBtnFace
@@ -1429,7 +1429,6 @@ object MainForm: TMainForm
     Padding.Bottom = 16
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 97
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -1568,29 +1567,26 @@ object MainForm: TMainForm
     ParentBackground = False
     ParentCtl3D = False
     TabOrder = 2
-    ExplicitTop = 219
-    ExplicitHeight = 335
-    object LV: TListView
+    object DBGrid: TDBGrid
       Left = 16
       Top = 16
       Width = 759
       Height = 306
       Align = alClient
-      BevelOuter = bvNone
       BorderStyle = bsNone
-      Columns = <>
+      DataSource = DM.SrcPv
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Segoe UI'
       Font.Style = []
-      RowSelect = True
       ParentFont = False
       TabOrder = 0
-      ViewStyle = vsReport
-      ExplicitLeft = -232
-      ExplicitTop = -10
-      ExplicitHeight = 303
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
     end
   end
 end
