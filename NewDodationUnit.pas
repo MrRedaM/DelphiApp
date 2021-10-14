@@ -53,6 +53,7 @@ end;
 
 procedure TNewDodationForm.FormShow(Sender: TObject);
 begin
+  EditCmd.Clear;
 with DM.DSComm do begin
     open;
     while not EOF do

@@ -1,7 +1,7 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 572
-  Width = 368
+  Width = 507
   object Conn: TSQLConnection
     ConnectionName = 'MySQLConnection'
     DriverName = 'MySQL'
@@ -49,6 +49,7 @@ object DM: TDM
     Active = True
     Aggregates = <>
     Connection = Conn
+    DataSet.Active = True
     DataSet.CommandText = 'select * from `pv_installation`'
     DataSet.DataSource = SrcPv
     DataSet.MaxBlobSize = -1
@@ -281,11 +282,47 @@ object DM: TDM
     Left = 224
     Top = 456
   end
-  object TableComm: TSQLTable
-    MasterSource = SrcComm
+  object QueryClient: TSQLQuery
+    DataSource = SrcClient
     MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from `pv_installation`')
     SQLConnection = Conn
-    Left = 48
-    Top = 280
+    Left = 312
+    Top = 520
+  end
+  object DSClient: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection = Conn
+    DataSet.CommandText = 'select * from `client`'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 136
+    Top = 520
+    object DSClientN_cl: TIntegerField
+      FieldName = 'N_cl'
+      Required = True
+    end
+    object DSClientNom_cl: TStringField
+      FieldName = 'Nom_cl'
+      Required = True
+    end
+    object DSClientPre_cl: TStringField
+      FieldName = 'Pre_cl'
+      Required = True
+      Size = 15
+    end
+    object DSClientNum_srv_com: TIntegerField
+      FieldName = 'Num_srv_com'
+      Required = True
+    end
+  end
+  object SrcClient: TDataSource
+    DataSet = DSClient
+    Left = 224
+    Top = 520
   end
 end

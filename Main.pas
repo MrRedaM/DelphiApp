@@ -24,9 +24,13 @@ type
     Image3: TImage;
     Panel1: TPanel;
     DBGrid: TDBGrid;
+    ClearSearch: TImage;
     procedure CBDocTypeChange(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure BtnEditClick(Sender: TObject);
+    procedure SearchByNameInvokeSearch(Sender: TObject);
+    procedure SearchByNameChange(Sender: TObject);
+    procedure ClearSearchClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -64,10 +68,40 @@ begin
   end;
 end;
 
+procedure TMainForm.ClearSearchClick(Sender: TObject);
+begin
+  SearchByName.Clear;
+end;
+
 procedure TMainForm.FormActivate(Sender: TObject);
 begin
   CBDocType.ItemIndex := 0;
   DBGrid.DataSource := DM.SrcPv;
+end;
+
+procedure TMainForm.SearchByNameChange(Sender: TObject);
+begin
+  if SearchByName.Text = '' then
+    ClearSearch.visible := false
+  else
+    ClearSearch.visible := true;
+
+end;
+
+procedure TMainForm.SearchByNameInvokeSearch(Sender: TObject);
+begin
+  if SearchByName.Text = '' then begin
+
+  end else begin
+    with DM.QueryClient do begin
+      Close;
+      SQL.Text := 'select N_cl from `client` where Nom_cl like ''%'+SearchByName.Text+'%''';
+      open;
+      First;
+      DM.DSPv.Locate('Num_cl', FieldByName('N_cl').AsString, []);
+    end;
+  end;
+
 end;
 
 end.

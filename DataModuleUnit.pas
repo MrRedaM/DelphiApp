@@ -4,7 +4,7 @@ interface
 
 uses
   System.SysUtils, System.Classes, Data.DBXMySQL, Data.DB, Data.SqlExpr,
-  Data.FMTBcd, Datasnap.DBClient, SimpleDS;
+  Data.FMTBcd, Datasnap.DBClient, SimpleDS, Datasnap.Provider;
 
 type
   TDM = class(TDataModule)
@@ -48,7 +48,13 @@ type
     SrcComm: TDataSource;
     QueryComm: TSQLQuery;
     SrcCentral: TDataSource;
-    TableComm: TSQLTable;
+    QueryClient: TSQLQuery;
+    DSClient: TSimpleDataSet;
+    SrcClient: TDataSource;
+    DSClientN_cl: TIntegerField;
+    DSClientNom_cl: TStringField;
+    DSClientPre_cl: TStringField;
+    DSClientNum_srv_com: TIntegerField;
   private
     { Private declarations }
   public
