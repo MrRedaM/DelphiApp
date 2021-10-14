@@ -1,6 +1,6 @@
 object DM: TDM
   OldCreateOrder = False
-  Height = 279
+  Height = 572
   Width = 368
   object Conn: TSQLConnection
     ConnectionName = 'MySQLConnection'
@@ -135,9 +135,10 @@ object DM: TDM
     Top = 24
   end
   object QueryPv: TSQLQuery
-    DataSource = SrcPv
     MaxBlobSize = -1
     Params = <>
+    SQL.Strings = (
+      'select * from `pv_installation`')
     SQLConnection = Conn
     Left = 304
     Top = 24
@@ -181,7 +182,9 @@ object DM: TDM
   end
   object QueryDecharge: TSQLQuery
     DataSource = SrcDecharge
+    MaxBlobSize = -1
     Params = <>
+    SQLConnection = Conn
     Left = 304
     Top = 112
   end
@@ -203,8 +206,86 @@ object DM: TDM
   end
   object QueryDodation: TSQLQuery
     DataSource = SrcDodation
+    MaxBlobSize = -1
     Params = <>
+    SQLConnection = Conn
     Left = 304
     Top = 200
+  end
+  object DSDeploy: TSimpleDataSet
+    Aggregates = <>
+    Connection = Conn
+    DataSet.CommandText = 'select * from `service_deploiement`'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 136
+    Top = 328
+  end
+  object DSComm: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection = Conn
+    DataSet.CommandText = 'select * from `service_commercial`'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 136
+    Top = 272
+    object DSCommN_srv: TIntegerField
+      FieldName = 'N_srv'
+      Required = True
+    end
+    object DSCommDep: TStringField
+      FieldName = 'Dep'
+      Required = True
+      Size = 10
+    end
+  end
+  object DSLet: TSimpleDataSet
+    Aggregates = <>
+    Connection = Conn
+    DataSet.CommandText = 'select * from `magasin_let`'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 136
+    Top = 392
+  end
+  object DSCentral: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection = Conn
+    DataSet.CommandText = 'select * from `magasin_central`'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 136
+    Top = 456
+  end
+  object SrcComm: TDataSource
+    DataSet = DSComm
+    Left = 224
+    Top = 272
+  end
+  object QueryComm: TSQLQuery
+    DataSource = SrcComm
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = Conn
+    Left = 304
+    Top = 272
+  end
+  object SrcCentral: TDataSource
+    DataSet = DSCentral
+    Left = 224
+    Top = 456
+  end
+  object TableComm: TSQLTable
+    MasterSource = SrcComm
+    MaxBlobSize = -1
+    SQLConnection = Conn
+    Left = 48
+    Top = 280
   end
 end

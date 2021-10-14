@@ -40,12 +40,12 @@ implementation
 
 {$R *.dfm}
 
-uses DataModuleUnit, NewDodationUnit;
+uses DataModuleUnit, NewDodationUnit, NewPvUnit;
 
 procedure TMainForm.BtnEditClick(Sender: TObject);
 begin
   case CBDocType.ItemIndex of
-    0: ;
+    0: NewPvForm.ShowModal;
     1: NewDodationForm.ShowModal;
     2: ;
   end;

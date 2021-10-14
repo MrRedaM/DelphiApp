@@ -39,6 +39,16 @@ type
     DSDodation: TSimpleDataSet;
     SrcDodation: TDataSource;
     QueryDodation: TSQLQuery;
+    DSDeploy: TSimpleDataSet;
+    DSComm: TSimpleDataSet;
+    DSLet: TSimpleDataSet;
+    DSCentral: TSimpleDataSet;
+    DSCommN_srv: TIntegerField;
+    DSCommDep: TStringField;
+    SrcComm: TDataSource;
+    QueryComm: TSQLQuery;
+    SrcCentral: TDataSource;
+    TableComm: TSQLTable;
   private
     { Private declarations }
   public
