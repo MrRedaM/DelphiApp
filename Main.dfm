@@ -1587,7 +1587,7 @@ object MainForm: TMainForm
         TabOrder = 1
         OnClick = BtnAddClick
       end
-      object Button1: TButton
+      object BtnPrint: TButton
         Left = 144
         Top = 0
         Width = 75
@@ -1601,7 +1601,7 @@ object MainForm: TMainForm
         Font.Style = []
         ParentFont = False
         TabOrder = 2
-        OnClick = Button1Click
+        OnClick = BtnPrintClick
       end
       object BtnEdit: TButton
         Left = 73

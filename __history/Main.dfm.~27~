@@ -13,6 +13,7 @@ object MainForm: TMainForm
   OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Header: TPanel
@@ -694,6 +695,7 @@ object MainForm: TMainForm
         C1F12DCA9E4510F346A468CEBEEABB29A48DFF1B6EFC513EFF0F117B0B8A97C7
         2A170000000049454E44AE426082}
       Proportional = True
+      OnClick = Image2Click
       ExplicitLeft = 760
       ExplicitTop = 24
       ExplicitHeight = 33
@@ -1483,7 +1485,7 @@ object MainForm: TMainForm
       Caption = 'Panel1'
       ShowCaption = False
       TabOrder = 1
-      object Image4: TImage
+      object ClearSearch: TImage
         AlignWithMargins = True
         Left = 408
         Top = 0
@@ -1539,6 +1541,8 @@ object MainForm: TMainForm
           2DC97356FE2AFF960F96FE3FC05208D38F0DEF0325CBBC78527F277EE61F22C3
           0BC991CB26E70000000049454E44AE426082}
         Proportional = True
+        Visible = False
+        OnClick = ClearSearchClick
         ExplicitLeft = 416
       end
       object SearchByName: TSearchBox
@@ -1561,23 +1565,27 @@ object MainForm: TMainForm
         ParentFont = False
         TabOrder = 0
         TextHint = 'Rechercher par nom'
+        OnChange = SearchByNameChange
         OnInvokeSearch = SearchByNameInvokeSearch
       end
-      object BtnEdit: TButton
+      object BtnAdd: TButton
         Left = 0
         Top = 0
         Width = 73
         Height = 25
         Align = alLeft
+        BiDiMode = bdLeftToRight
         Caption = 'Nouveau'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
+        ImageIndex = 0
+        ParentBiDiMode = False
         ParentFont = False
         TabOrder = 1
-        OnClick = BtnEditClick
+        OnClick = BtnAddClick
       end
       object Button1: TButton
         Left = 144
@@ -1593,8 +1601,9 @@ object MainForm: TMainForm
         Font.Style = []
         ParentFont = False
         TabOrder = 2
+        OnClick = Button1Click
       end
-      object BtnAdd: TButton
+      object BtnEdit: TButton
         Left = 73
         Top = 0
         Width = 71
@@ -1608,6 +1617,7 @@ object MainForm: TMainForm
         Font.Style = []
         ParentFont = False
         TabOrder = 3
+        OnClick = BtnEditClick
       end
     end
   end
@@ -1635,12 +1645,8 @@ object MainForm: TMainForm
       Align = alClient
       BorderStyle = bsNone
       DataSource = DM.SrcPv
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+      ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText

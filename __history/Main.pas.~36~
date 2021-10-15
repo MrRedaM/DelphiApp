@@ -32,6 +32,9 @@ type
     procedure SearchByNameChange(Sender: TObject);
     procedure ClearSearchClick(Sender: TObject);
     procedure BtnEditClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -45,7 +48,8 @@ implementation
 
 {$R *.dfm}
 
-uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit;
+uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit, DisplayPvUnit,
+  LoginScreen;
 
 procedure TMainForm.BtnEditClick(Sender: TObject);
 var
@@ -67,14 +71,17 @@ begin
     end;
     2: begin
       with DechargeForm do begin
-        BtnConfirm.Caption := s;
-        s := s + ' décharge';
-        Title.Caption := s;
+        Mode := MODE_EDIT;
         ShowModal;
       end;
       
     end;
   end;
+end;
+
+procedure TMainForm.Button1Click(Sender: TObject);
+begin
+  DisplayPvForm.ShowModal;
 end;
 
 procedure TMainForm.BtnAddClick(Sender: TObject);
@@ -97,10 +104,11 @@ begin
       NewDodationForm.ShowModal;
     end;
     2: begin
-      DechargeForm.BtnConfirm.Caption := s;
-      s := s + ' décharge';
-      DechargeForm.Title.Caption := s;
-      DechargeForm.ShowModal;
+      with DechargeForm do begin
+        Mode := MODE_NEW;
+        ShowModal;
+      end;
+      
     end;
   end;
 end;
@@ -127,6 +135,19 @@ procedure TMainForm.FormActivate(Sender: TObject);
 begin
   CBDocType.ItemIndex := 0;
   DBGrid.DataSource := DM.SrcPv;
+end;
+
+
+
+procedure TMainForm.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Login.Show;
+end;
+
+procedure TMainForm.Image2Click(Sender: TObject);
+begin
+  Login.Show;
+  Self.Close;
 end;
 
 procedure TMainForm.SearchByNameChange(Sender: TObject);

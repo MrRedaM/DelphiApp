@@ -19,7 +19,7 @@ type
     Label1: TLabel;
     BtnEdit: TButton;
     BtnAdd: TButton;
-    Button1: TButton;
+    BtnPrint: TButton;
     SearchByName: TSearchBox;
     Image3: TImage;
     Panel1: TPanel;
@@ -32,7 +32,7 @@ type
     procedure SearchByNameChange(Sender: TObject);
     procedure ClearSearchClick(Sender: TObject);
     procedure BtnEditClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure BtnPrintClick(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
@@ -79,7 +79,7 @@ begin
   end;
 end;
 
-procedure TMainForm.Button1Click(Sender: TObject);
+procedure TMainForm.BtnPrintClick(Sender: TObject);
 begin
   DisplayPvForm.ShowModal;
 end;
@@ -120,9 +120,27 @@ combo : TComboBox;
 begin
   combo := TComboBox (Sender);
   case combo.ItemIndex of
-    0: DBGrid.DataSource := DM.SrcPv;
-    1: DBGrid.DataSource := DM.SrcDodation;
-    2: DBGrid.DataSource := DM.SrcDecharge;
+    0: begin
+      DBGrid.DataSource := DM.SrcPv;
+      BtnAdd.Enabled := false;
+      BtnEdit.Enabled := false;
+      BtnPrint.Enabled := true;
+      SearchByName.Enabled := true;
+    end;
+    1: begin
+      DBGrid.DataSource := DM.SrcDodation;
+      BtnAdd.Enabled := true;
+      BtnEdit.Enabled := false;
+      BtnPrint.Enabled := false;
+      SearchByName.Enabled := false;
+    end;
+    2: begin
+      DBGrid.DataSource := DM.SrcDecharge;
+      BtnAdd.Enabled := false;
+      BtnEdit.Enabled := true;
+      BtnPrint.Enabled := false;
+      SearchByName.Enabled := false;
+    end;
   end;
 end;
 
@@ -135,6 +153,10 @@ procedure TMainForm.FormActivate(Sender: TObject);
 begin
   CBDocType.ItemIndex := 0;
   DBGrid.DataSource := DM.SrcPv;
+  BtnAdd.Enabled := false;
+  BtnEdit.Enabled := false;
+  BtnPrint.Enabled := true;
+  SearchByName.Enabled := true;
 end;
 
 
