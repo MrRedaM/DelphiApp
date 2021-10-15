@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.ComCtrls;
+  Vcl.Imaging.pngimage, Vcl.ComCtrls, Main;
 
 type
   TLogin = class(TForm)
@@ -16,8 +16,19 @@ type
     EditServer: TEdit;
     EditDB: TEdit;
     Button1: TButton;
-    StatusServer: TStatusBar;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    Image1: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    CheckShowPass: TCheckBox;
     procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure CheckShowPassClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,12 +58,33 @@ Try
   DM.Conn.Params.Values['UserName'] := EditUsername.Text;
   DM.Conn.Params.Values['Password'] := EditPassword.Text;
   DM.Conn.Connected := true;
-  StatusServer.SimpleText := 'Server : Connected'
+  MainForm.Show;
+  Hide;
   Except On E : Exception do
     begin
-       StatusServer.SimpleText := 'Server : Error while connecting'
+      ShowMessage('Erreur lors de la connexion à la base de données. Veuillez vérifier les informations saisit et réessayer.');
     end;
   end;
+end;
+
+procedure TLogin.CheckShowPassClick(Sender: TObject);
+begin
+  if CheckShowPass.Checked then EditPassword.PasswordChar := #0
+  else EditPassword.PasswordChar := '*';
+
+end;
+
+procedure TLogin.FormCreate(Sender: TObject);
+begin
+  EditServer.Text := 'localhost';
+  EditDB.Text := 'bdd';
+  CheckShowPass.Font.Color := $FFFFFF;
+end;
+
+procedure TLogin.FormShow(Sender: TObject);
+begin
+  EditUsername.Clear;
+  EditPassword.Clear;
 end;
 
 end.

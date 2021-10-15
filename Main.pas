@@ -33,6 +33,8 @@ type
     procedure ClearSearchClick(Sender: TObject);
     procedure BtnEditClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -46,7 +48,8 @@ implementation
 
 {$R *.dfm}
 
-uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit, DisplayPvUnit;
+uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit, DisplayPvUnit,
+  LoginScreen;
 
 procedure TMainForm.BtnEditClick(Sender: TObject);
 var
@@ -132,6 +135,19 @@ procedure TMainForm.FormActivate(Sender: TObject);
 begin
   CBDocType.ItemIndex := 0;
   DBGrid.DataSource := DM.SrcPv;
+end;
+
+
+
+procedure TMainForm.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Login.Show;
+end;
+
+procedure TMainForm.Image2Click(Sender: TObject);
+begin
+  Login.Show;
+  Self.Close;
 end;
 
 procedure TMainForm.SearchByNameChange(Sender: TObject);

@@ -41,7 +41,6 @@ object DM: TDM
       'Compressed=False'
       'Encrypted=False'
       'ConnectTimeout=60')
-    Connected = True
     Left = 16
     Top = 24
   end
@@ -49,7 +48,6 @@ object DM: TDM
     Active = True
     Aggregates = <>
     Connection = Conn
-    DataSet.Active = True
     DataSet.CommandText = 'select * from `pv_installation`'
     DataSet.DataSource = SrcPv
     DataSet.MaxBlobSize = -1

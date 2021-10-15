@@ -13,6 +13,7 @@ object MainForm: TMainForm
   OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Header: TPanel
@@ -694,6 +695,7 @@ object MainForm: TMainForm
         C1F12DCA9E4510F346A468CEBEEABB29A48DFF1B6EFC513EFF0F117B0B8A97C7
         2A170000000049454E44AE426082}
       Proportional = True
+      OnClick = Image2Click
       ExplicitLeft = 760
       ExplicitTop = 24
       ExplicitHeight = 33
@@ -1579,6 +1581,7 @@ object MainForm: TMainForm
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
+        ImageIndex = 0
         ParentBiDiMode = False
         ParentFont = False
         TabOrder = 1

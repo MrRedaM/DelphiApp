@@ -8,15 +8,17 @@ uses
   NewPvUnit in 'NewPvUnit.pas' {NewPvForm},
   NewDodationUnit in 'NewDodationUnit.pas' {NewDodationForm},
   DechargeUnit in 'DechargeUnit.pas' {DechargeForm},
-  DisplayPvUnit in 'DisplayPvUnit.pas' {DisplayPvForm};
+  DisplayPvUnit in 'DisplayPvUnit.pas' {DisplayPvForm},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TLogin, Login);
+  Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TNewPvForm, NewPvForm);
   Application.CreateForm(TNewDodationForm, NewDodationForm);
