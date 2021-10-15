@@ -1598,6 +1598,7 @@ object MainForm: TMainForm
         Font.Style = []
         ParentFont = False
         TabOrder = 2
+        OnClick = Button1Click
       end
       object BtnEdit: TButton
         Left = 73

@@ -32,6 +32,7 @@ type
     procedure SearchByNameChange(Sender: TObject);
     procedure ClearSearchClick(Sender: TObject);
     procedure BtnEditClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,7 +46,7 @@ implementation
 
 {$R *.dfm}
 
-uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit;
+uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit, DisplayPvUnit;
 
 procedure TMainForm.BtnEditClick(Sender: TObject);
 var
@@ -73,6 +74,11 @@ begin
       
     end;
   end;
+end;
+
+procedure TMainForm.Button1Click(Sender: TObject);
+begin
+  DisplayPvForm.ShowModal;
 end;
 
 procedure TMainForm.BtnAddClick(Sender: TObject);

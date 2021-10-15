@@ -1,0 +1,55 @@
+unit DisplayPvUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage;
+
+type
+  TDisplayPvForm = class(TForm)
+    Panel1: TPanel;
+    Label2: TLabel;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Image1: TImage;
+    Panel2: TPanel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Panel3: TPanel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Label10: TLabel;
+    Panel6: TPanel;
+    Label11: TLabel;
+    Panel7: TPanel;
+    Label12: TLabel;
+    Panel8: TPanel;
+    Label13: TLabel;
+    Panel9: TPanel;
+    Label14: TLabel;
+    Panel10: TPanel;
+    Label15: TLabel;
+    Panel11: TPanel;
+    Label16: TLabel;
+    Panel12: TPanel;
+    Label17: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DisplayPvForm: TDisplayPvForm;
+
+implementation
+
+{$R *.dfm}
+
+end.
