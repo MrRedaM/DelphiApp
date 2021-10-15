@@ -9,17 +9,17 @@ uses
 type
   TNewDodationForm = class(TForm)
     Panel1: TPanel;
-    Label1: TLabel;
+    Title: TLabel;
     Label2: TLabel;
     EditCmd: TEdit;
     Label3: TLabel;
     Label4: TLabel;
-    Button1: TButton;
-    Button2: TButton;
+    BtnConfirm: TButton;
+    BtnCancel: TButton;
     ComboComm: TDBComboBox;
     ComboCentral: TDBComboBox;
     procedure FormShow(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure BtnConfirmClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +35,7 @@ implementation
 
 uses DataModuleUnit;
 
-procedure TNewDodationForm.Button1Click(Sender: TObject);
+procedure TNewDodationForm.BtnConfirmClick(Sender: TObject);
 begin
   with DM.QueryDodation do
   begin

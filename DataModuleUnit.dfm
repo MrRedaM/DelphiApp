@@ -214,6 +214,7 @@ object DM: TDM
     Top = 200
   end
   object DSDeploy: TSimpleDataSet
+    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `service_deploiement`'
@@ -244,6 +245,7 @@ object DM: TDM
     end
   end
   object DSLet: TSimpleDataSet
+    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `magasin_let`'
@@ -324,5 +326,15 @@ object DM: TDM
     DataSet = DSClient
     Left = 224
     Top = 520
+  end
+  object SrcDeploy: TDataSource
+    DataSet = DSDeploy
+    Left = 224
+    Top = 336
+  end
+  object SrcLet: TDataSource
+    DataSet = DSLet
+    Left = 224
+    Top = 392
   end
 end

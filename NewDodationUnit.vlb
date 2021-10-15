@@ -31,12 +31,6 @@ Coordinates=561,10,96,58
 [DM.QueryDodation]
 Coordinates=225,430,124,58
 
-[Button1]
-Coordinates=359,430,59,58
-
-[Label1]
-Coordinates=706,430,53,58
-
 [DM.DSDecharge]
 Coordinates=113,10,111,168
 
@@ -45,9 +39,6 @@ Coordinates=112,78,72,36
 
 [DM.SrcComm]
 Coordinates=60,622,95,36
-
-[Button2]
-Coordinates=574,430,59,58
 
 [DM.DSLet]
 Coordinates=491,430,73,58
@@ -79,4 +70,13 @@ Coordinates=587,1,91,36
 
 [EditCmd]
 Coordinates=73,430,44,58
+
+[Title]
+Coordinates=706,430,53,58
+
+[BtnConfirm]
+Coordinates=359,430,59,58
+
+[BtnCancel]
+Coordinates=574,430,59,58
 

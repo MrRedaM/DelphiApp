@@ -3,7 +3,7 @@ object NewPvForm: TNewPvForm
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'Nouveau PV d'#39'installation'
+  Caption = 'PV d'#39'installation'
   ClientHeight = 712
   ClientWidth = 388
   Color = clBtnFace
@@ -28,7 +28,6 @@ object NewPvForm: TNewPvForm
     Padding.Right = 16
     Padding.Bottom = 16
     TabOrder = 0
-    ExplicitHeight = 744
     object Title: TLabel
       Left = 17
       Top = 17
@@ -43,8 +42,6 @@ object NewPvForm: TNewPvForm
       Font.Name = 'Segoe UI Semibold'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 1
-      ExplicitTop = 1
       ExplicitWidth = 245
     end
     object Label1: TLabel
@@ -107,10 +104,10 @@ object NewPvForm: TNewPvForm
       WordWrap = True
     end
     object Label8: TLabel
-      Left = 17
+      Left = 40
       Top = 347
-      Width = 112
-      Height = 34
+      Width = 89
+      Height = 26
       Alignment = taRightJustify
       Caption = 'Travaille effectu'#233' d'#233'signation'
       WordWrap = True
@@ -291,7 +288,7 @@ object NewPvForm: TNewPvForm
       TabOrder = 14
       TextHint = 'Saisir num'#233'ro client'
     end
-    object Button1: TButton
+    object BtnCancel: TButton
       Left = 17
       Top = 674
       Width = 112
@@ -300,7 +297,7 @@ object NewPvForm: TNewPvForm
       ModalResult = 3
       TabOrder = 15
     end
-    object Button2: TButton
+    object BtnConfirm: TButton
       Left = 135
       Top = 674
       Width = 236

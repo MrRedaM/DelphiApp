@@ -3,7 +3,7 @@ object NewDodationForm: TNewDodationForm
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'Nouvelle demande de dodation '
+  Caption = 'Demande de dodation '
   ClientHeight = 279
   ClientWidth = 383
   Color = clBtnFace
@@ -28,7 +28,7 @@ object NewDodationForm: TNewDodationForm
     Padding.Right = 16
     Padding.Bottom = 16
     TabOrder = 0
-    object Label1: TLabel
+    object Title: TLabel
       Left = 17
       Top = 17
       Width = 349
@@ -76,7 +76,7 @@ object NewDodationForm: TNewDodationForm
       TabOrder = 0
       TextHint = 'Saisir num'#233'ro commande'
     end
-    object Button1: TButton
+    object BtnConfirm: TButton
       Left = 128
       Top = 240
       Width = 238
@@ -85,9 +85,9 @@ object NewDodationForm: TNewDodationForm
       Default = True
       ModalResult = 1
       TabOrder = 1
-      OnClick = Button1Click
+      OnClick = BtnConfirmClick
     end
-    object Button2: TButton
+    object BtnCancel: TButton
       Left = 17
       Top = 240
       Width = 105

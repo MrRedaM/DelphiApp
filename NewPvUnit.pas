@@ -40,8 +40,8 @@ type
     Label14: TLabel;
     Edit15: TEdit;
     Label15: TLabel;
-    Button1: TButton;
-    Button2: TButton;
+    BtnCancel: TButton;
+    BtnConfirm: TButton;
   private
     { Private declarations }
   public

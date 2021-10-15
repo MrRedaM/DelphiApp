@@ -6,7 +6,8 @@ uses
   DataModuleUnit in 'DataModuleUnit.pas' {DM: TDataModule},
   Main in 'Main.pas' {MainForm},
   NewPvUnit in 'NewPvUnit.pas' {NewPvForm},
-  NewDodationUnit in 'NewDodationUnit.pas' {NewDodationForm};
+  NewDodationUnit in 'NewDodationUnit.pas' {NewDodationForm},
+  DechargeUnit in 'DechargeUnit.pas' {DechargeForm};
 
 {$R *.res}
 
@@ -18,5 +19,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TNewPvForm, NewPvForm);
   Application.CreateForm(TNewDodationForm, NewDodationForm);
+  Application.CreateForm(TDechargeForm, DechargeForm);
   Application.Run;
 end.

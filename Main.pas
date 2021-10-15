@@ -17,8 +17,8 @@ type
     Image2: TImage;
     CBDocType: TComboBox;
     Label1: TLabel;
-    BtnAdd: TButton;
     BtnEdit: TButton;
+    BtnAdd: TButton;
     Button1: TButton;
     SearchByName: TSearchBox;
     Image3: TImage;
@@ -27,10 +27,11 @@ type
     ClearSearch: TImage;
     procedure CBDocTypeChange(Sender: TObject);
     procedure FormActivate(Sender: TObject);
-    procedure BtnEditClick(Sender: TObject);
+    procedure BtnAddClick(Sender: TObject);
     procedure SearchByNameInvokeSearch(Sender: TObject);
     procedure SearchByNameChange(Sender: TObject);
     procedure ClearSearchClick(Sender: TObject);
+    procedure BtnEditClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,23 +45,71 @@ implementation
 
 {$R *.dfm}
 
-uses DataModuleUnit, NewDodationUnit, NewPvUnit;
+uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit;
 
 procedure TMainForm.BtnEditClick(Sender: TObject);
+var
+  s : string;
 begin
+  s := 'Modifier';
   case CBDocType.ItemIndex of
-    0: NewPvForm.ShowModal;
-    1: NewDodationForm.ShowModal;
-    2: ;
+    0: begin
+      NewPvForm.BtnConfirm.Caption := s;
+      s := s + ' PV d''installation';
+      NewPvForm.Title.Caption := s;
+      NewPvForm.ShowModal;
+    end;
+    1: begin
+      NewDodationForm.BtnConfirm.Caption := s;
+      s := s + ' demande de dodation';
+      NewDodationForm.Title.Caption := s;
+      NewDodationForm.ShowModal;
+    end;
+    2: begin
+      with DechargeForm do begin
+        Mode := MODE_EDIT;
+        ShowModal;
+      end;
+      
+    end;
   end;
 end;
+
+procedure TMainForm.BtnAddClick(Sender: TObject);
+var
+  s : string;
+begin
+  s := 'Créer';
+  //ShowMessage(DBGrid.Fields[2].AsString);
+  case CBDocType.ItemIndex of
+    0: begin
+      NewPvForm.BtnConfirm.Caption := s;
+      s := s + ' PV d''installation';
+      NewPvForm.Title.Caption := s;
+      NewPvForm.ShowModal;
+    end;
+    1: begin
+      NewDodationForm.BtnConfirm.Caption := s;
+      s := s + ' demande de dodation';
+      NewDodationForm.Title.Caption := s;
+      NewDodationForm.ShowModal;
+    end;
+    2: begin
+      with DechargeForm do begin
+        Mode := MODE_NEW;
+        ShowModal;
+      end;
+      
+    end;
+  end;
+end;
+
 
 procedure TMainForm.CBDocTypeChange(Sender: TObject);
 var
 combo : TComboBox;
 begin
   combo := TComboBox (Sender);
-  //ShowMessage(combo.Items[combo.ItemIndex]);
   case combo.ItemIndex of
     0: DBGrid.DataSource := DM.SrcPv;
     1: DBGrid.DataSource := DM.SrcDodation;

@@ -1,0 +1,63 @@
+unit DechargeUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls,
+  Vcl.NumberBox, Vcl.ExtCtrls;
+
+type
+  TDechargeForm = class(TForm)
+    Panel: TPanel;
+    Title: TLabel;
+    Label1: TLabel;
+    EditLet: TEdit;
+    Label2: TLabel;
+    NumberQnt: TNumberBox;
+    ComboDeploy: TDBComboBox;
+    Label3: TLabel;
+    ComboLet: TDBComboBox;
+    Label4: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DechargeForm: TDechargeForm;
+
+implementation
+
+{$R *.dfm}
+
+uses DataModuleUnit;
+
+procedure TDechargeForm.FormShow(Sender: TObject);
+begin
+  with DM.DSDeploy do begin
+    open;
+    while not EOF do
+    begin
+      ComboComm.items.add(FieldByName('N_srv').AsString);
+      next;
+    end;
+  end;
+  ComboComm.ItemIndex := 0;
+  with DM.DSLet do begin
+    open;
+    while not EOF do
+    begin
+      ComboCentral.items.add(FieldByName('N_mag_Cen').AsString);
+      next;
+    end;
+  end;
+  ComboCentral.ItemIndex := 0;
+end;
+end;
+
+end.

@@ -1566,21 +1566,23 @@ object MainForm: TMainForm
         OnChange = SearchByNameChange
         OnInvokeSearch = SearchByNameInvokeSearch
       end
-      object BtnEdit: TButton
+      object BtnAdd: TButton
         Left = 0
         Top = 0
         Width = 73
         Height = 25
         Align = alLeft
+        BiDiMode = bdLeftToRight
         Caption = 'Nouveau'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Segoe UI'
         Font.Style = []
+        ParentBiDiMode = False
         ParentFont = False
         TabOrder = 1
-        OnClick = BtnEditClick
+        OnClick = BtnAddClick
       end
       object Button1: TButton
         Left = 144
@@ -1597,7 +1599,7 @@ object MainForm: TMainForm
         ParentFont = False
         TabOrder = 2
       end
-      object BtnAdd: TButton
+      object BtnEdit: TButton
         Left = 73
         Top = 0
         Width = 71
@@ -1611,6 +1613,7 @@ object MainForm: TMainForm
         Font.Style = []
         ParentFont = False
         TabOrder = 3
+        OnClick = BtnEditClick
       end
     end
   end
@@ -1638,12 +1641,8 @@ object MainForm: TMainForm
       Align = alClient
       BorderStyle = bsNone
       DataSource = DM.SrcPv
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+      ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText

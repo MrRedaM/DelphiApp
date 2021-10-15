@@ -55,6 +55,8 @@ type
     DSClientNom_cl: TStringField;
     DSClientPre_cl: TStringField;
     DSClientNum_srv_com: TIntegerField;
+    SrcDeploy: TDataSource;
+    SrcLet: TDataSource;
   private
     { Private declarations }
   public

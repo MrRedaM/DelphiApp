@@ -1,0 +1,39 @@
+unit DechargeUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls,
+  Vcl.NumberBox, Vcl.ExtCtrls;
+
+type
+  TDechargeForm = class(TForm)
+    Panel: TPanel;
+    Title: TLabel;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    NumberBox1: TNumberBox;
+    DBComboBox1: TDBComboBox;
+    Label3: TLabel;
+    DBComboBox2: TDBComboBox;
+    Label4: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DechargeForm: TDechargeForm;
+
+implementation
+
+{$R *.dfm}
+
+uses DataModuleUnit;
+
+end.
