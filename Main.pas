@@ -49,7 +49,7 @@ implementation
 {$R *.dfm}
 
 uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit, DisplayPvUnit,
-  LoginScreen;
+  LoginScreen, NewClientUnit;
 
 procedure TMainForm.BtnEditClick(Sender: TObject);
 var
@@ -108,7 +108,9 @@ begin
         Mode := MODE_NEW;
         ShowModal;
       end;
-      
+    end;
+    3: begin
+      NewClientForm.ShowModal;
     end;
   end;
 end;
@@ -138,6 +140,13 @@ begin
       DBGrid.DataSource := DM.SrcDecharge;
       BtnAdd.Enabled := false;
       BtnEdit.Enabled := true;
+      BtnPrint.Enabled := false;
+      SearchByName.Enabled := false;
+    end;
+    3: begin
+      DBGrid.DataSource := DM.SrcClient;
+      BtnAdd.Enabled := true;
+      BtnEdit.Enabled := false;
       BtnPrint.Enabled := false;
       SearchByName.Enabled := false;
     end;
