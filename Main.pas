@@ -168,7 +168,6 @@ end;
 
 procedure TMainForm.Image2Click(Sender: TObject);
 begin
-  Login.Show;
   Self.Close;
 end;
 

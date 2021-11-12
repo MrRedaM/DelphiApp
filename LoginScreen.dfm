@@ -526,7 +526,6 @@ object Login: TLogin
     Color = 10638885
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 284
     object Title: TLabel
       AlignWithMargins = True
       Left = 17
@@ -571,7 +570,6 @@ object Login: TLogin
       ParentFont = False
       TabOrder = 0
       OnClick = Button1Click
-      ExplicitTop = 242
     end
     object PageControl1: TPageControl
       AlignWithMargins = True
@@ -587,7 +585,6 @@ object Login: TLogin
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
-      ExplicitHeight = 161
       object TabSheet1: TTabSheet
         Caption = 'Compte'
         Font.Charset = DEFAULT_CHARSET
@@ -614,7 +611,6 @@ object Login: TLogin
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitTop = 58
           ExplicitWidth = 70
         end
         object Label2: TLabel
@@ -679,7 +675,6 @@ object Login: TLogin
           PasswordChar = '*'
           TabOrder = 1
           TextHint = 'Saisir le mot de passe'
-          ExplicitTop = 79
         end
         object CheckShowPass: TCheckBox
           AlignWithMargins = True
@@ -703,7 +698,6 @@ object Login: TLogin
           ParentFont = False
           TabOrder = 2
           OnClick = CheckShowPassClick
-          ExplicitWidth = 63
         end
       end
       object TabSheet2: TTabSheet
@@ -731,7 +725,6 @@ object Login: TLogin
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitTop = 58
           ExplicitWidth = 117
         end
         object Label4: TLabel
@@ -795,7 +788,6 @@ object Login: TLogin
           ParentFont = False
           TabOrder = 1
           TextHint = 'Saisir le nom base de donn'#233'es'
-          ExplicitTop = 79
         end
       end
     end

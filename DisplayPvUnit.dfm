@@ -4,7 +4,7 @@ object DisplayPvForm: TDisplayPvForm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'PV d'#39'installation'
-  ClientHeight = 813
+  ClientHeight = 715
   ClientWidth = 589
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -26,27 +26,28 @@ object DisplayPvForm: TDisplayPvForm
     Left = 32
     Top = 425
     Width = 525
-    Height = 32
+    Height = 13
     Margins.Left = 0
     Margins.Top = 16
     Margins.Right = 0
     Margins.Bottom = 0
     Align = alTop
     Caption = 'Travail effectu'#233' : '
-    ExplicitTop = 411
+    ExplicitWidth = 86
   end
   object Obs: TLabel
     AlignWithMargins = True
     Left = 32
-    Top = 609
+    Top = 590
     Width = 525
-    Height = 42
+    Height = 13
     Margins.Left = 0
     Margins.Top = 16
     Margins.Right = 0
     Margins.Bottom = 0
     Align = alTop
     Caption = 'Observation : '
+    ExplicitWidth = 69
   end
   object Panel1: TPanel
     Left = 32
@@ -620,7 +621,6 @@ object DisplayPvForm: TDisplayPvForm
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitTop = 137
     object Label6: TLabel
       Left = 0
       Top = 34
@@ -635,7 +635,6 @@ object DisplayPvForm: TDisplayPvForm
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      ExplicitTop = 18
       ExplicitWidth = 121
     end
     object Label7: TLabel
@@ -652,7 +651,6 @@ object DisplayPvForm: TDisplayPvForm
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      ExplicitTop = 0
       ExplicitWidth = 285
     end
   end
@@ -841,7 +839,8 @@ object DisplayPvForm: TDisplayPvForm
         Height = 12
         Align = alClient
         Caption = 'Personne '#224' contacter : '
-        ExplicitWidth = 345
+        ExplicitWidth = 113
+        ExplicitHeight = 13
       end
     end
     object Panel10: TPanel
@@ -994,7 +993,7 @@ object DisplayPvForm: TDisplayPvForm
   object Panel14: TPanel
     AlignWithMargins = True
     Left = 32
-    Top = 465
+    Top = 446
     Width = 525
     Height = 128
     Margins.Left = 0
@@ -1145,8 +1144,8 @@ object DisplayPvForm: TDisplayPvForm
         Align = alClient
         Alignment = taCenter
         Caption = 'Connecteur RJ45'
-        ExplicitWidth = 191
-        ExplicitHeight = 25
+        ExplicitWidth = 83
+        ExplicitHeight = 13
       end
     end
     object Panel21: TPanel
@@ -1166,12 +1165,11 @@ object DisplayPvForm: TDisplayPvForm
       ParentBackground = False
       ShowCaption = False
       TabOrder = 5
-      ExplicitTop = 104
       object Label25: TLabel
         Left = 62
         Top = 0
-        Width = 411
-        Height = 32
+        Width = 404
+        Height = 26
         Alignment = taCenter
         Caption = 
           'AVIS A L'#39'ABONNE : Toute manipulation de nature '#224' modifier le fon' +
@@ -1199,9 +1197,10 @@ object DisplayPvForm: TDisplayPvForm
         Left = 0
         Top = 0
         Width = 137
-        Height = 25
+        Height = 13
         Align = alTop
         Alignment = taCenter
+        ExplicitWidth = 3
       end
     end
     object Panel23: TPanel
@@ -1262,7 +1261,7 @@ object DisplayPvForm: TDisplayPvForm
   object Panel25: TPanel
     AlignWithMargins = True
     Left = 32
-    Top = 659
+    Top = 611
     Width = 525
     Height = 99
     Margins.Left = 0
@@ -1277,7 +1276,6 @@ object DisplayPvForm: TDisplayPvForm
     ParentBackground = False
     ShowCaption = False
     TabOrder = 6
-    ExplicitTop = 630
     object Panel26: TPanel
       Left = -2
       Top = -2

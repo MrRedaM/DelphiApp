@@ -7,6 +7,8 @@ object DM: TDM
     DriverName = 'MySQL'
     LoginPrompt = False
     Params.Strings = (
+      'User_Name=user'
+      'Password=password'
       'DriverUnit=Data.DBXMySQL'
       
         'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver270.' +
@@ -32,8 +34,6 @@ object DM: TDM
       'DriverName=MySQL'
       'HostName=localhost'
       'Database=bdd'
-      'User_Name=test'
-      'Password=test'
       'ServerCharSet='
       'BlobSize=-1'
       'ErrorResourceFile='
@@ -45,7 +45,6 @@ object DM: TDM
     Top = 24
   end
   object DSPv: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `pv_installation`'
@@ -143,7 +142,6 @@ object DM: TDM
     Top = 24
   end
   object DSDecharge: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `decharge`'
@@ -188,7 +186,6 @@ object DM: TDM
     Top = 112
   end
   object DSDodation: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `demande_dodation`'
@@ -212,7 +209,6 @@ object DM: TDM
     Top = 200
   end
   object DSDeploy: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `service_deploiement`'
@@ -223,7 +219,6 @@ object DM: TDM
     Top = 328
   end
   object DSComm: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `service_commercial`'
@@ -243,7 +238,6 @@ object DM: TDM
     end
   end
   object DSLet: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `magasin_let`'
@@ -254,7 +248,6 @@ object DM: TDM
     Top = 392
   end
   object DSCentral: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `magasin_central`'
@@ -293,7 +286,6 @@ object DM: TDM
     Top = 520
   end
   object DSClient: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `client`'

@@ -55,9 +55,17 @@ Try
   DM.Conn.Connected := false;
   DM.Conn.Params.Values['HostName'] := EditServer.Text;
   DM.Conn.Params.Values['DataBase'] := EditDB.Text;
-  DM.Conn.Params.Values['UserName'] := EditUsername.Text;
+  DM.Conn.Params.Values['User_Name'] := EditUsername.Text;
   DM.Conn.Params.Values['Password'] := EditPassword.Text;
   DM.Conn.Connected := true;
+  DM.DSPv.Active := true;
+  DM.DSDecharge.Active := true;
+  DM.DSClient.Active := true;
+  DM.DSDodation.Active := true;
+  DM.DSComm.Active := true;
+  DM.DSLet.Active := true;
+  DM.DSDeploy.Active := true;
+  DM.DSCentral.Active := true;
   MainForm.Show;
   Hide;
   Except On E : Exception do

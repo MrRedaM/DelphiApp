@@ -1473,7 +1473,8 @@ object MainForm: TMainForm
       Items.Strings = (
         'PV d'#39'installation'
         'Demande de dodation'
-        'D'#233'charge')
+        'D'#233'charge'
+        'Clients')
     end
     object Panel1: TPanel
       Left = 16
