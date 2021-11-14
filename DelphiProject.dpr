@@ -10,7 +10,8 @@ uses
   DechargeUnit in 'DechargeUnit.pas' {DechargeForm},
   DisplayPvUnit in 'DisplayPvUnit.pas' {DisplayPvForm},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  NewClientUnit in 'NewClientUnit.pas' {NewClientForm};
 
 {$R *.res}
 
@@ -24,5 +25,6 @@ begin
   Application.CreateForm(TNewDodationForm, NewDodationForm);
   Application.CreateForm(TDechargeForm, DechargeForm);
   Application.CreateForm(TDisplayPvForm, DisplayPvForm);
+  Application.CreateForm(TNewClientForm, NewClientForm);
   Application.Run;
 end.

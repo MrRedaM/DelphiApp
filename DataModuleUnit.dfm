@@ -327,4 +327,23 @@ object DM: TDM
     Left = 224
     Top = 392
   end
+  object DSComm1: TSimpleDataSet
+    Aggregates = <>
+    Connection = Conn
+    DataSet.CommandText = 'select * from `service_commercial`'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 72
+    Top = 272
+    object IntegerField1: TIntegerField
+      FieldName = 'N_srv'
+      Required = True
+    end
+    object StringField1: TStringField
+      FieldName = 'Dep'
+      Required = True
+      Size = 10
+    end
+  end
 end

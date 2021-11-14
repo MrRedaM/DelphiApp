@@ -131,6 +131,10 @@
             <Form>DisplayPvForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="NewClientUnit.pas">
+            <Form>NewClientForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

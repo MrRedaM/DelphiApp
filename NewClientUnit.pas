@@ -54,7 +54,7 @@ procedure TNewClientForm.FormShow(Sender: TObject);
 begin
   EditName.Clear;
   EditFirstName.Clear;
-  with DM.DSComm do begin
+  with DM.DSComm1 do begin
     open;
     while not EOF do
     begin

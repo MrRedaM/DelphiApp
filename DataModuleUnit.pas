@@ -57,6 +57,9 @@ type
     DSClientNum_srv_com: TIntegerField;
     SrcDeploy: TDataSource;
     SrcLet: TDataSource;
+    DSComm1: TSimpleDataSet;
+    IntegerField1: TIntegerField;
+    StringField1: TStringField;
   private
     { Private declarations }
   public
