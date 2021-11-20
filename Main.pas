@@ -25,6 +25,7 @@ type
     Panel1: TPanel;
     DBGrid: TDBGrid;
     ClearSearch: TImage;
+    BtnDelete: TButton;
     procedure CBDocTypeChange(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure BtnAddClick(Sender: TObject);
@@ -35,6 +36,7 @@ type
     procedure BtnPrintClick(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure BtnDeleteClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,7 +51,22 @@ implementation
 {$R *.dfm}
 
 uses DataModuleUnit, NewDodationUnit, NewPvUnit, DechargeUnit, DisplayPvUnit,
-  LoginScreen, NewClientUnit;
+  LoginScreen, NewClientUnit, DeleteDialog;
+
+procedure TMainForm.BtnDeleteClick(Sender: TObject);
+var
+  combo : TComboBox;
+begin
+//  combo := TComboBox (Sender);
+//  case combo.ItemIndex of
+//    1: begin
+//      DeleteDialogForm.DodId.Caption := DBGrid.Fields[0].AsString;
+//      DeleteDialogForm.ShowModal;
+//    end;
+//  end;
+  DeleteDialogForm.DodId.Caption := DBGrid.Fields[0].AsString;
+  DeleteDialogForm.ShowModal;
+end;
 
 procedure TMainForm.BtnEditClick(Sender: TObject);
 var
@@ -127,13 +144,15 @@ begin
       BtnAdd.Enabled := false;
       BtnEdit.Enabled := false;
       BtnPrint.Enabled := true;
+      BtnDelete.Enabled := false;
       SearchByName.Enabled := true;
     end;
     1: begin
       DBGrid.DataSource := DM.SrcDodation;
       BtnAdd.Enabled := true;
-      BtnEdit.Enabled := false;
+      BtnEdit.Enabled := true;
       BtnPrint.Enabled := false;
+      BtnDelete.Enabled := true;
       SearchByName.Enabled := false;
     end;
     2: begin
@@ -141,6 +160,7 @@ begin
       BtnAdd.Enabled := false;
       BtnEdit.Enabled := true;
       BtnPrint.Enabled := false;
+      BtnDelete.Enabled := false;
       SearchByName.Enabled := false;
     end;
     3: begin
@@ -148,6 +168,7 @@ begin
       BtnAdd.Enabled := true;
       BtnEdit.Enabled := false;
       BtnPrint.Enabled := false;
+      BtnDelete.Enabled := false;
       SearchByName.Enabled := false;
     end;
   end;
@@ -165,6 +186,7 @@ begin
   BtnAdd.Enabled := false;
   BtnEdit.Enabled := false;
   BtnPrint.Enabled := true;
+  BtnDelete.Enabled := false;
   SearchByName.Enabled := true;
 end;
 

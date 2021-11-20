@@ -1589,7 +1589,7 @@ object MainForm: TMainForm
         OnClick = BtnAddClick
       end
       object BtnPrint: TButton
-        Left = 144
+        Left = 219
         Top = 0
         Width = 75
         Height = 25
@@ -1603,6 +1603,7 @@ object MainForm: TMainForm
         ParentFont = False
         TabOrder = 2
         OnClick = BtnPrintClick
+        ExplicitLeft = 225
       end
       object BtnEdit: TButton
         Left = 73
@@ -1619,6 +1620,16 @@ object MainForm: TMainForm
         ParentFont = False
         TabOrder = 3
         OnClick = BtnEditClick
+      end
+      object BtnDelete: TButton
+        Left = 144
+        Top = 0
+        Width = 75
+        Height = 25
+        Align = alLeft
+        Caption = 'Supprimer'
+        TabOrder = 4
+        OnClick = BtnDeleteClick
       end
     end
   end
