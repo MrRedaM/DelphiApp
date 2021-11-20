@@ -41,7 +41,6 @@ object DM: TDM
       'Compressed=False'
       'Encrypted=False'
       'ConnectTimeout=60')
-    Connected = True
     Left = 16
     Top = 24
   end

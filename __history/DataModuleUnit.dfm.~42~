@@ -7,6 +7,8 @@ object DM: TDM
     DriverName = 'MySQL'
     LoginPrompt = False
     Params.Strings = (
+      'User_Name=test'
+      'Password=test'
       'DriverUnit=Data.DBXMySQL'
       
         'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver270.' +
@@ -32,8 +34,6 @@ object DM: TDM
       'DriverName=MySQL'
       'HostName=localhost'
       'Database=bdd'
-      'User_Name=test'
-      'Password=test'
       'ServerCharSet='
       'BlobSize=-1'
       'ErrorResourceFile='
@@ -46,10 +46,8 @@ object DM: TDM
     Top = 24
   end
   object DSPv: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
-    DataSet.Active = True
     DataSet.CommandText = 'select * from `pv_installation`'
     DataSet.DataSource = SrcPv
     DataSet.MaxBlobSize = -1
@@ -145,7 +143,6 @@ object DM: TDM
     Top = 24
   end
   object DSDecharge: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `decharge`'
@@ -190,7 +187,6 @@ object DM: TDM
     Top = 112
   end
   object DSDodation: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `demande_dodation`'
@@ -224,7 +220,6 @@ object DM: TDM
     Top = 328
   end
   object DSComm: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `service_commercial`'
@@ -242,6 +237,11 @@ object DM: TDM
       Required = True
       Size = 10
     end
+    object DSCommnom: TStringField
+      FieldName = 'nom'
+      Required = True
+      Size = 24
+    end
   end
   object DSLet: TSimpleDataSet
     Aggregates = <>
@@ -254,7 +254,6 @@ object DM: TDM
     Top = 392
   end
   object DSCentral: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = Conn
     DataSet.CommandText = 'select * from `magasin_central`'
@@ -263,6 +262,20 @@ object DM: TDM
     Params = <>
     Left = 136
     Top = 456
+    object DSCentralN_mag_Cen: TIntegerField
+      FieldName = 'N_mag_Cen'
+      Required = True
+    end
+    object DSCentralnom: TStringField
+      FieldName = 'nom'
+      Required = True
+      Size = 24
+    end
+    object DSCentralDep: TStringField
+      FieldName = 'Dep'
+      Required = True
+      Size = 10
+    end
   end
   object SrcComm: TDataSource
     DataSet = DSComm
@@ -282,13 +295,75 @@ object DM: TDM
     Left = 224
     Top = 456
   end
-  object SQLQuery1: TSQLQuery
+  object QueryClient: TSQLQuery
+    DataSource = SrcClient
     MaxBlobSize = -1
     Params = <>
     SQL.Strings = (
       'select * from `pv_installation`')
     SQLConnection = Conn
-    Left = 376
-    Top = 24
+    Left = 312
+    Top = 520
+  end
+  object DSClient: TSimpleDataSet
+    Aggregates = <>
+    Connection = Conn
+    DataSet.CommandText = 'select * from `client`'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 136
+    Top = 520
+    object DSClientN_cl: TIntegerField
+      FieldName = 'N_cl'
+      Required = True
+    end
+    object DSClientNom_cl: TStringField
+      FieldName = 'Nom_cl'
+      Required = True
+    end
+    object DSClientPre_cl: TStringField
+      FieldName = 'Pre_cl'
+      Required = True
+      Size = 15
+    end
+    object DSClientNum_srv_com: TIntegerField
+      FieldName = 'Num_srv_com'
+      Required = True
+    end
+  end
+  object SrcClient: TDataSource
+    DataSet = DSClient
+    Left = 224
+    Top = 520
+  end
+  object SrcDeploy: TDataSource
+    DataSet = DSDeploy
+    Left = 224
+    Top = 336
+  end
+  object SrcLet: TDataSource
+    DataSet = DSLet
+    Left = 224
+    Top = 392
+  end
+  object DSComm1: TSimpleDataSet
+    Aggregates = <>
+    Connection = Conn
+    DataSet.CommandText = 'select * from `service_commercial`'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 72
+    Top = 272
+    object IntegerField1: TIntegerField
+      FieldName = 'N_srv'
+      Required = True
+    end
+    object StringField1: TStringField
+      FieldName = 'Dep'
+      Required = True
+      Size = 10
+    end
   end
 end
