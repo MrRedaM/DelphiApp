@@ -34,10 +34,6 @@ object DeleteDialogForm: TDeleteDialogForm
     Padding.Bottom = 16
     ShowCaption = False
     TabOrder = 0
-    ExplicitLeft = 112
-    ExplicitTop = 72
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Label1: TLabel
       AlignWithMargins = True
       Left = 17
@@ -69,8 +65,6 @@ object DeleteDialogForm: TDeleteDialogForm
       Caption = 'Annuler'
       ModalResult = 3
       TabOrder = 0
-      ExplicitTop = 63
-      ExplicitHeight = 28
     end
     object Button2: TButton
       Left = 200
@@ -82,8 +76,6 @@ object DeleteDialogForm: TDeleteDialogForm
       ModalResult = 1
       TabOrder = 1
       OnClick = Button2Click
-      ExplicitTop = 63
-      ExplicitHeight = 28
     end
   end
 end

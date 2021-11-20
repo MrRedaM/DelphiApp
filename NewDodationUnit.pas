@@ -4,20 +4,40 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls,
+  Vcl.ComCtrls, Vcl.NumberBox;
 
 type
   TNewDodationForm = class(TForm)
     Panel1: TPanel;
     Title: TLabel;
     Label2: TLabel;
-    EditCmd: TEdit;
+    dem: TEdit;
     Label3: TLabel;
     Label4: TLabel;
     BtnConfirm: TButton;
     BtnCancel: TButton;
     ComboComm: TDBComboBox;
     ComboCentral: TDBComboBox;
+    Panel2: TPanel;
+    Label1: TLabel;
+    date: TDateTimePicker;
+    Label5: TLabel;
+    obs: TEdit;
+    Label6: TLabel;
+    dep: TEdit;
+    Label7: TLabel;
+    nat: TEdit;
+    des: TEdit;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    dir: TEdit;
+    Label11: TLabel;
+    Label12: TLabel;
+    divis: TEdit;
+    prix: TNumberBox;
+    qtn: TNumberBox;
     procedure FormShow(Sender: TObject);
     procedure BtnConfirmClick(Sender: TObject);
   private
@@ -40,8 +60,10 @@ begin
   with DM.QueryDodation do
   begin
     SQL.Clear;
-    SQL.Add('INSERT INTO `demande_dodation` (`N_Dem_Dot`, `N_Cmd`, `Num_srv_com`, `Num_mag_cen`)');
-    SQL.Add('VALUES (NULL, '+EditCmd.Text+', '+ComboComm.Items[ComboComm.ItemIndex]+', '+ComboCentral.Items[ComboCentral.ItemIndex]+')');
+    SQL.Add('INSERT INTO `demande_dodation` (`Numéro demande de dotation`, `Date`, `Demandeur`, `Observation`, `Département`');
+    SQL.Add(', `Nature`, `Désignation`, `Quantité Demandé`, `Prix Estimatif`, `Division`, `Direction`, `Numéro service commercial`, `Numéro magasin central`, `Validation`)');
+    SQL.Add('VALUES (NULL, '''+FormatDateTime('yyyy-mm-dd',date.Date)+''', '''+dem.Text+''', '''+obs.Text+''', '''+dep.Text+''', '''+nat.Text+''', '''+des.Text+''', '+qtn.Text+', '+prix.Text+', '''+divis.Text+''', '''+dir.Text+''', '+ComboComm.Items[ComboComm.ItemIndex]+', '+ComboCentral.Items[ComboCentral.ItemIndex]+', 0)');
+    ShowMessage(SQL.Text);
     ExecSQL(true);
   end;
   with DM.DSDodation do begin
@@ -53,7 +75,6 @@ end;
 
 procedure TNewDodationForm.FormShow(Sender: TObject);
 begin
-  EditCmd.Clear;
 with DM.DSComm do begin
     open;
     while not EOF do

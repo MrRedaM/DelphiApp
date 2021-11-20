@@ -68,9 +68,6 @@ Coordinates=425,617,99,36
 []
 Coordinates=587,1,91,36
 
-[EditCmd]
-Coordinates=73,430,44,58
-
 [Title]
 Coordinates=706,430,53,58
 
@@ -79,4 +76,7 @@ Coordinates=359,430,59,58
 
 [BtnCancel]
 Coordinates=574,430,59,58
+
+[dem]
+Coordinates=73,430,44,58
 

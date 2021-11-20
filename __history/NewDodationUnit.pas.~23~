@@ -1,0 +1,97 @@
+unit NewDodationUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls,
+  Vcl.ComCtrls, Vcl.NumberBox;
+
+type
+  TNewDodationForm = class(TForm)
+    Panel1: TPanel;
+    Title: TLabel;
+    Label2: TLabel;
+    dem: TEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    BtnConfirm: TButton;
+    BtnCancel: TButton;
+    ComboComm: TDBComboBox;
+    ComboCentral: TDBComboBox;
+    Panel2: TPanel;
+    Label1: TLabel;
+    DateTimePicker1: TDateTimePicker;
+    Label5: TLabel;
+    obs: TEdit;
+    Label6: TLabel;
+    dep: TEdit;
+    Label7: TLabel;
+    nat: TEdit;
+    des: TEdit;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    dir: TEdit;
+    Label11: TLabel;
+    Label12: TLabel;
+    divis: TEdit;
+    prix: TNumberBox;
+    qtn: TNumberBox;
+    procedure FormShow(Sender: TObject);
+    procedure BtnConfirmClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  NewDodationForm: TNewDodationForm;
+
+implementation
+
+{$R *.dfm}
+
+uses DataModuleUnit;
+
+procedure TNewDodationForm.BtnConfirmClick(Sender: TObject);
+begin
+  with DM.QueryDodation do
+  begin
+    SQL.Clear;
+    SQL.Add('INSERT INTO `demande_dodation` (`Numéro demande de dotation`, `Num_srv_com`, `Num_mag_cen`)');
+    SQL.Add('VALUES (NULL, '+ComboComm.Items[ComboComm.ItemIndex]+', '+ComboCentral.Items[ComboCentral.ItemIndex]+')');
+    ExecSQL(true);
+  end;
+  with DM.DSDodation do begin
+    MergeChangeLog;
+    ApplyUpdates(-1);
+    Refresh;
+  end;
+end;
+
+procedure TNewDodationForm.FormShow(Sender: TObject);
+begin
+  EditCmd.Clear;
+with DM.DSComm do begin
+    open;
+    while not EOF do
+    begin
+      ComboComm.items.add(FieldByName('N_srv').AsString);
+      next;
+    end;
+  end;
+  ComboComm.ItemIndex := 0;
+with DM.DSCentral do begin
+    open;
+    while not EOF do
+    begin
+      ComboCentral.items.add(FieldByName('N_mag_Cen').AsString);
+      next;
+    end;
+  end;
+  ComboCentral.ItemIndex := 0;
+end;
+
+end.

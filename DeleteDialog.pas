@@ -35,7 +35,7 @@ begin
   with DM.QueryDodation do
       begin
         SQL.Clear;
-        SQL.Add('DELETE from demande_dodation WHERE N_Dem_Dot=' + DodId.Caption);
+        SQL.Add('DELETE from demande_dodation WHERE `demande_dodation`.`Numéro demande de dotation`=' + DodId.Caption);
         ExecSQL(true);
       end;
       with DM.DSDodation do begin
