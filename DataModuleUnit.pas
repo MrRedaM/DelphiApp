@@ -60,6 +60,10 @@ type
     DSComm1: TSimpleDataSet;
     IntegerField1: TIntegerField;
     StringField1: TStringField;
+    DSCommnom: TStringField;
+    DSCentralN_mag_Cen: TIntegerField;
+    DSCentralnom: TStringField;
+    DSCentralDep: TStringField;
   private
     { Private declarations }
   public

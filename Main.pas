@@ -150,7 +150,7 @@ begin
     1: begin
       DBGrid.DataSource := DM.SrcDodation;
       BtnAdd.Enabled := true;
-      BtnEdit.Enabled := true;
+      BtnEdit.Enabled := false;
       BtnPrint.Enabled := false;
       BtnDelete.Enabled := true;
       SearchByName.Enabled := false;

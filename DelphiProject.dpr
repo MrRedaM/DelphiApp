@@ -11,7 +11,8 @@ uses
   DisplayPvUnit in 'DisplayPvUnit.pas' {DisplayPvForm},
   Vcl.Themes,
   Vcl.Styles,
-  NewClientUnit in 'NewClientUnit.pas' {NewClientForm};
+  NewClientUnit in 'NewClientUnit.pas' {NewClientForm},
+  DeleteDialog in 'DeleteDialog.pas' {DeleteDialogForm};
 
 {$R *.res}
 
@@ -26,5 +27,6 @@ begin
   Application.CreateForm(TDechargeForm, DechargeForm);
   Application.CreateForm(TDisplayPvForm, DisplayPvForm);
   Application.CreateForm(TNewClientForm, NewClientForm);
+  Application.CreateForm(TDeleteDialogForm, DeleteDialogForm);
   Application.Run;
 end.

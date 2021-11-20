@@ -56,14 +56,19 @@ implementation
 uses DataModuleUnit;
 
 procedure TNewDodationForm.BtnConfirmClick(Sender: TObject);
+var
+  com, cen: String;
 begin
+  com := ComboComm.Items[ComboComm.ItemIndex];
+  com :=  com.Substring(0, com.IndexOf(' - '));
+  cen := ComboCentral.Items[ComboCentral.ItemIndex];
+  cen := cen.Substring(0, cen.IndexOf(' - '));
   with DM.QueryDodation do
   begin
     SQL.Clear;
     SQL.Add('INSERT INTO `demande_dodation` (`Numéro demande de dotation`, `Date`, `Demandeur`, `Observation`, `Département`');
     SQL.Add(', `Nature`, `Désignation`, `Quantité Demandé`, `Prix Estimatif`, `Division`, `Direction`, `Numéro service commercial`, `Numéro magasin central`, `Validation`)');
-    SQL.Add('VALUES (NULL, '''+FormatDateTime('yyyy-mm-dd',date.Date)+''', '''+dem.Text+''', '''+obs.Text+''', '''+dep.Text+''', '''+nat.Text+''', '''+des.Text+''', '+qtn.Text+', '+prix.Text+', '''+divis.Text+''', '''+dir.Text+''', '+ComboComm.Items[ComboComm.ItemIndex]+', '+ComboCentral.Items[ComboCentral.ItemIndex]+', 0)');
-    ShowMessage(SQL.Text);
+    SQL.Add('VALUES (NULL, '''+FormatDateTime('yyyy-mm-dd',date.Date)+''', '''+dem.Text+''', '''+obs.Text+''', '''+dep.Text+''', '''+nat.Text+''', '''+des.Text+''', '+qtn.Text+', '+prix.Text+', '''+divis.Text+''', '''+dir.Text+''', '+com+', '+cen+', 0)');
     ExecSQL(true);
   end;
   with DM.DSDodation do begin
@@ -79,7 +84,7 @@ with DM.DSComm do begin
     open;
     while not EOF do
     begin
-      ComboComm.items.add(FieldByName('N_srv').AsString);
+      ComboComm.items.add(FieldByName('N_srv').AsString + ' - ' + FieldByName('nom').AsString);
       next;
     end;
   end;
@@ -88,7 +93,7 @@ with DM.DSCentral do begin
     open;
     while not EOF do
     begin
-      ComboCentral.items.add(FieldByName('N_mag_Cen').AsString);
+      ComboCentral.items.add(FieldByName('N_mag_Cen').AsString + ' - ' + FieldByName('nom').AsString);
       next;
     end;
   end;

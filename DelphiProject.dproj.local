@@ -10,11 +10,11 @@
     <Transaction>2021/10/04 21:07:03.000.972,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModel.pas</Transaction>
     <Transaction>2021/10/04 21:07:03.000.972,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModel.dfm</Transaction>
     <Transaction>2021/10/04 21:42:37.000.447,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
-    <Transaction>2021/10/04 21:44:02.000.673,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModule.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
     <Transaction>2021/10/04 21:44:02.000.673,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModule.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm</Transaction>
+    <Transaction>2021/10/04 21:44:02.000.673,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModule.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
     <Transaction>2021/10/04 23:34:17.000.456,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
-    <Transaction>2021/10/04 23:36:04.000.456,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModuleUnit.pas</Transaction>
     <Transaction>2021/10/04 23:36:04.000.456,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModuleUnit.dfm</Transaction>
+    <Transaction>2021/10/04 23:36:04.000.456,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DataModuleUnit.pas</Transaction>
     <Transaction>2021/10/09 16:20:32.000.029,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
     <Transaction>2021/10/09 16:21:12.000.331,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Main.pas</Transaction>
     <Transaction>2021/10/09 16:21:12.000.331,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Main.dfm</Transaction>
@@ -25,13 +25,16 @@
     <Transaction>2021/10/13 22:40:09.000.192,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\NewDodationUnit.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm</Transaction>
     <Transaction>2021/10/13 22:40:09.000.192,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\NewDodationUnit.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
     <Transaction>2021/10/15 16:02:54.000.158,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
-    <Transaction>2021/10/15 16:15:00.000.303,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DechargeUnit.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm</Transaction>
     <Transaction>2021/10/15 16:15:00.000.303,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DechargeUnit.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
+    <Transaction>2021/10/15 16:15:00.000.303,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DechargeUnit.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm</Transaction>
     <Transaction>2021/10/15 18:54:38.000.397,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
-    <Transaction>2021/10/15 18:55:33.000.813,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DisplayPvUnit.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm</Transaction>
     <Transaction>2021/10/15 18:55:33.000.813,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DisplayPvUnit.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
+    <Transaction>2021/10/15 18:55:33.000.813,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DisplayPvUnit.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm</Transaction>
     <Transaction>2021/11/12 17:18:15.000.937,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
-    <Transaction>2021/11/12 17:26:17.000.871,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\NewClientUnit.pas</Transaction>
     <Transaction>2021/11/12 17:26:17.000.871,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\NewClientUnit.dfm</Transaction>
+    <Transaction>2021/11/12 17:26:17.000.871,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\NewClientUnit.pas</Transaction>
+    <Transaction>2021/11/20 18:55:46.000.370,=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas</Transaction>
+    <Transaction>2021/11/20 19:04:57.000.339,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.pas=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DeleteDialog.pas</Transaction>
+    <Transaction>2021/11/20 19:04:57.000.339,C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\Unit1.dfm=C:\Users\red\Documents\Embarcadero\Studio\Projects\AlgTel\DeleteDialog.dfm</Transaction>
   </Transactions>
 </BorlandProject>

@@ -28,9 +28,6 @@ object NewDodationForm: TNewDodationForm
     Padding.Right = 16
     Padding.Bottom = 16
     TabOrder = 0
-    ExplicitLeft = -48
-    ExplicitTop = -40
-    ExplicitHeight = 459
     object Title: TLabel
       Left = 17
       Top = 17
@@ -157,7 +154,7 @@ object NewDodationForm: TNewDodationForm
       Width = 206
       Height = 21
       Hint = 'Selectionner le service commercial'
-      DataField = 'N_srv'
+      DataField = 'nom'
       DataSource = DM.SrcComm
       TabOrder = 1
     end
@@ -166,7 +163,7 @@ object NewDodationForm: TNewDodationForm
       Top = 501
       Width = 206
       Height = 21
-      DataField = 'N_mag_Cen'
+      DataField = 'nom'
       DataSource = DM.SrcCentral
       TabOrder = 2
     end
@@ -180,7 +177,6 @@ object NewDodationForm: TNewDodationForm
       Caption = 'Panel2'
       ShowCaption = False
       TabOrder = 3
-      ExplicitTop = 408
       object BtnCancel: TButton
         Left = 0
         Top = 0
@@ -190,9 +186,6 @@ object NewDodationForm: TNewDodationForm
         Caption = 'Annuler'
         ModalResult = 3
         TabOrder = 0
-        ExplicitLeft = 1
-        ExplicitTop = 1
-        ExplicitHeight = 32
       end
       object BtnConfirm: TButton
         Left = 111
@@ -205,9 +198,6 @@ object NewDodationForm: TNewDodationForm
         ModalResult = 1
         TabOrder = 1
         OnClick = BtnConfirmClick
-        ExplicitLeft = 110
-        ExplicitTop = 1
-        ExplicitHeight = 32
       end
     end
     object date: TDateTimePicker

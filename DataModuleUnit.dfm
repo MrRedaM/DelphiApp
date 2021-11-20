@@ -7,8 +7,8 @@ object DM: TDM
     DriverName = 'MySQL'
     LoginPrompt = False
     Params.Strings = (
-      'User_Name=user'
-      'Password=password'
+      'User_Name=test'
+      'Password=test'
       'DriverUnit=Data.DBXMySQL'
       
         'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver270.' +
@@ -41,6 +41,7 @@ object DM: TDM
       'Compressed=False'
       'Encrypted=False'
       'ConnectTimeout=60')
+    Connected = True
     Left = 16
     Top = 24
   end
@@ -236,6 +237,11 @@ object DM: TDM
       Required = True
       Size = 10
     end
+    object DSCommnom: TStringField
+      FieldName = 'nom'
+      Required = True
+      Size = 24
+    end
   end
   object DSLet: TSimpleDataSet
     Aggregates = <>
@@ -256,6 +262,20 @@ object DM: TDM
     Params = <>
     Left = 136
     Top = 456
+    object DSCentralN_mag_Cen: TIntegerField
+      FieldName = 'N_mag_Cen'
+      Required = True
+    end
+    object DSCentralnom: TStringField
+      FieldName = 'nom'
+      Required = True
+      Size = 24
+    end
+    object DSCentralDep: TStringField
+      FieldName = 'Dep'
+      Required = True
+      Size = 10
+    end
   end
   object SrcComm: TDataSource
     DataSet = DSComm
