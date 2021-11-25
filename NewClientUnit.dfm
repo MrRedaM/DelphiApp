@@ -1,8 +1,8 @@
-object NewClientForm: TNewClientForm
+object Client: TClient
   Left = 0
   Top = 0
   BorderStyle = bsSingle
-  Caption = 'NewClientForm'
+  Caption = 'Client'
   ClientHeight = 235
   ClientWidth = 368
   Color = clBtnFace
@@ -35,7 +35,8 @@ object NewClientForm: TNewClientForm
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitWidth = 173
+    ExplicitLeft = 21
+    ExplicitTop = 21
   end
   object Label1: TLabel
     Left = 112

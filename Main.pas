@@ -97,9 +97,16 @@ begin
         Mode := MODE_EDIT;
         ShowModal;
       end;
-      
     end;
-  end;
+    3: begin
+      with Client do begin
+        Client.Button2.Caption := 'Modifier';
+        Title.Caption := 'Modifier client';
+        Mode := MODE_EDIT;
+        ShowModal;
+      end;
+    end;
+    end;
 end;
 
 procedure TMainForm.BtnPrintClick(Sender: TObject);
@@ -133,7 +140,9 @@ begin
       end;
     end;
     3: begin
-      NewClientForm.ShowModal;
+      Client.Button2.Caption := 'Créer';
+      Client.Title.Caption := 'Nouveau Client';
+      Client.ShowModal;
     end;
   end;
 end;
@@ -172,7 +181,7 @@ begin
     3: begin
       DBGrid.DataSource := DM.SrcClient;
       BtnAdd.Enabled := true;
-      BtnEdit.Enabled := false;
+      BtnEdit.Enabled := true;
       BtnPrint.Enabled := false;
       BtnDelete.Enabled := true;
       SearchByName.Enabled := false;
