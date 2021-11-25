@@ -132,7 +132,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="NewClientUnit.pas">
-            <Form>NewClientForm</Form>
+            <Form>Client</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="DeleteDialog.pas">

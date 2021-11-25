@@ -140,9 +140,12 @@ begin
       end;
     end;
     3: begin
-      Client.Button2.Caption := 'Créer';
-      Client.Title.Caption := 'Nouveau Client';
-      Client.ShowModal;
+      with Client do begin
+        Mode := MODE_NEW;
+        Button2.Caption := 'Créer';
+        Title.Caption := 'Nouveau Client';
+        ShowModal;
+      end;
     end;
   end;
 end;
