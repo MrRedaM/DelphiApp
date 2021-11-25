@@ -34,7 +34,7 @@ object DeleteDialogForm: TDeleteDialogForm
     Padding.Bottom = 16
     ShowCaption = False
     TabOrder = 0
-    object Label1: TLabel
+    object Message: TLabel
       AlignWithMargins = True
       Left = 17
       Top = 17
@@ -55,6 +55,14 @@ object DeleteDialogForm: TDeleteDialogForm
       ParentFont = False
       WordWrap = True
       ExplicitWidth = 358
+    end
+    object Mode: TLabel
+      Left = 16
+      Top = 48
+      Width = 30
+      Height = 13
+      Caption = 'Mode'
+      Visible = False
     end
     object Button1: TButton
       Left = 17

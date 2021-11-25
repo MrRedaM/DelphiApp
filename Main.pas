@@ -57,15 +57,21 @@ procedure TMainForm.BtnDeleteClick(Sender: TObject);
 var
   combo : TComboBox;
 begin
-//  combo := TComboBox (Sender);
-//  case combo.ItemIndex of
-//    1: begin
-//      DeleteDialogForm.DodId.Caption := DBGrid.Fields[0].AsString;
-//      DeleteDialogForm.ShowModal;
-//    end;
-//  end;
-  DeleteDialogForm.DodId.Caption := DBGrid.Fields[0].AsString;
-  DeleteDialogForm.ShowModal;
+  case CBDocType.ItemIndex of
+    1: begin
+      DeleteDialogForm.Message.Caption := 'Voulez-vous vraiment supprimer cette demande de dodation?';
+      DeleteDialogForm.Mode.Caption := '0';
+      DeleteDialogForm.DodId.Caption := DBGrid.Fields[0].AsString;
+      DeleteDialogForm.ShowModal;
+    end;
+    3: begin
+      DeleteDialogForm.Message.Caption := 'Voulez-vous vraiment supprimer ce client?';
+      DeleteDialogForm.Mode.Caption := '1';
+      DeleteDialogForm.DodId.Caption := DBGrid.Fields[0].AsString;
+      DeleteDialogForm.ShowModal;
+    end;
+  end;
+
 end;
 
 procedure TMainForm.BtnEditClick(Sender: TObject);
@@ -168,7 +174,7 @@ begin
       BtnAdd.Enabled := true;
       BtnEdit.Enabled := false;
       BtnPrint.Enabled := false;
-      BtnDelete.Enabled := false;
+      BtnDelete.Enabled := true;
       SearchByName.Enabled := false;
     end;
   end;

@@ -1603,7 +1603,6 @@ object MainForm: TMainForm
         ParentFont = False
         TabOrder = 2
         OnClick = BtnPrintClick
-        ExplicitLeft = 225
       end
       object BtnEdit: TButton
         Left = 73
